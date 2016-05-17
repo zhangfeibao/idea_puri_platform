@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   width="1200" height="660" applicationComplete="windowedapplication1_applicationCompleteHandler(event)">
+	
+	<fx:Script>
+
+		
+		<![CDATA[
+			import com.midea.william.CCBool;
+			import com.midea.william.CCNumSteper;
+			import com.midea.william.IConfigComponent;
+			import com.midea.william.ui.ConnectWire;
+			import com.midea.william.ui.DevicePort;
+			import com.midea.william.ui.Pin;
+			
+			import mx.core.UIComponent;
+			import mx.events.FlexEvent;
+			
+			import spark.components.Alert;
+			
+			private var fileRef:FileReference;
+			private var wires:Vector.<ConnectWire>;
+			
+			private var platformIsLoaded:Boolean;
+			
+			protected function loadConfigFile(event:MouseEvent):void
+			{
+				fileRef = new FileReference();
+				/* 加载平台文件 */
+				fileRef.addEventListener(Event.SELECT, onFileSelected);
+				fileRef.addEventListener(Event.CANCEL, onCancel);
+				fileRef.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
+				fileRef.addEventListener(SecurityErrorEvent.SECURITY_ERROR,
+					onSecurityError);
+				var textTypeFilter:FileFilter = new FileFilter("平台配置文件 (*.xml, *.platcof)",
+					"*.xml;*.platcof");
+				fileRef.browse([textTypeFilter]);
+			}
+			
+			public function onFileSelected(evt:Event):void
+			{
+				fileRef.addEventListener(ProgressEvent.PROGRESS, onProgress);
+				fileRef.addEventListener(Event.COMPLETE, onComplete);
+				fileRef.load();
+			}
+			
+			public function onProgress(evt:ProgressEvent):void
+			{
+				/* 留空 */
+			}
+			
+			public function onComplete(evt:Event):void
+			{
+				try
+				{
+					var xml:XML = XML(fileRef.data);
+					parseXmlDat(xml);
+				} 
+				catch(error:Error) 
+				{
+					Alert.show("数据损坏，请找平台维护人员","错误");
+				}
+
+				fileRef.removeEventListener(Event.SELECT, onFileSelected); 
+				fileRef.removeEventListener(ProgressEvent.PROGRESS, onProgress); 
+				fileRef.removeEventListener(Event.COMPLETE, onComplete); 
+				fileRef.removeEventListener(Event.CANCEL, onCancel); 
+			}
+			public function onCancel(evt:Event):void
+			{
+				//trace("The browse request was canceled by the user.");
+			}
+			
+			public function onIOError(evt:IOErrorEvent):void
+			{
+				Alert.show("加载配置文件出错","错误");
+			}
+			public function onSecurityError(evt:Event):void
+			{
+				Alert.show("加载配置文件出错","错误");
+			}
+			
+			
+			
+			private function parseXmlDat(xml:XML):void
+			{
+				var yPosition:int = 0;
+				
+				uiComponent.removeChildren();
+				configPanel.removeAllElements();
+				porth_txt.text = "";
+				portc_txt.text = "";
+				
+				for each(var pin:XML in xml.mcu.pin)
+				{
+					//trace(pin.@designator,"---",pin.des);
+					var p:Pin = new Pin(pin);
+					p.x = designPanel.width - p.width;
+					p.y = yPosition;
+					uiComponent.addChild(p);
+					yPosition += 35;
+				}
+				
+				yPosition = 0;
+				for each(var dp:XML in xml.device.pin)
+				{
+					var dport:DevicePort = new DevicePort(dp);
+					dport.x = 0;
+					dport.y = yPosition;
+					uiComponent.addChild(dport);
+					yPosition += 35;
+				}
+				
+				
+				for each(var para:XML in xml.parameters.parameter)
+				{
+					if(para.cc_type == "bo")
+					{
+						var bo:CCBool = new CCBool();
+						bo.CCBoolInit(para);
+						configPanel.addElement(bo);
+					}
+					else if(para.cc_type == "num")
+					{
+						var num:CCNumSteper = new CCNumSteper();
+						num.CCNumSteperInit(para);
+						configPanel.addElement(num);
+					}
+				}
+				
+				platformIsLoaded = true;
+			}
+			
+			private var uiComponent:UIComponent;
+			protected function windowedapplication1_applicationCompleteHandler(event:FlexEvent):void
+			{
+				platformIsLoaded = false;
+				//fileRef = new FileReference();
+				wires = new Vector.<ConnectWire>;
+				// TODO Auto-generated method stub
+				uiComponent = new UIComponent();
+				uiComponent.x = uiComponent.y = 0;
+				designPanel.addElement(uiComponent);
+				
+				uiComponent.addEventListener(MouseEvent.RIGHT_MOUSE_UP,panelStoptDrag);
+				uiComponent.addEventListener(MouseEvent.RIGHT_MOUSE_DOWN,panelStarttDrag);
+				
+				uiComponent.addEventListener(MouseEvent.CLICK,drawLine);
+			}
+			
+			private function panelStarttDrag(event:MouseEvent):void
+			{
+				uiComponent.startDrag(false,new Rectangle(0,-4000,uiComponent.width,8000));
+			}
+			
+			private function panelStoptDrag(event:MouseEvent):void
+			{
+				uiComponent.stopDrag();
+			}
+			
+			
+			private var _curWire:ConnectWire;
+			
+			private function drawLine(event:MouseEvent):void
+			{
+				var pin:Pin;
+				var port:DevicePort;
+				var wire:ConnectWire;
+				
+				if(event.target is Pin)
+				{
+					pin  = event.target as Pin;
+					if(_curWire != null && _curWire.port != null && _curWire.pin == null)
+					{
+						_curWire.pin = pin;
+						_curWire.graphics.clear();
+						_curWire.graphics.lineStyle(4,Math.random()*0x888888);
+						_curWire.graphics.moveTo(_curWire.port.x + 180,_curWire.port.y + 12);
+						_curWire.graphics.lineTo(_curWire.pin.x + 9,_curWire.pin.y + 9);
+						
+						//wires.push(_curWire);
+						uiComponent.addChild(_curWire);
+						
+						_curWire = null;
+					}
+					
+				}
+				else if(event.target is DevicePort)
+				{
+					port = event.target as DevicePort;
+					
+					if(_curWire == null)
+					{
+						_curWire = new ConnectWire(port);
+					}
+				}
+				else if(event.target is ConnectWire)
+				{
+					wire = event.target as ConnectWire;
+					if(event.altKey)
+					{
+						uiComponent.removeChild(wire);
+					}
+				}
+				else
+				{
+					_curWire = null;
+				}
+			}
+			
+			protected function codeGen(event:MouseEvent):void
+			{
+				var theWire:ConnectWire;
+				var macroStr:String = "";
+				var ioConfigStr:String = "void port_ioconfig(void)\r\n{\r\n";
+				
+				var projConfigStr:String = "#ifndef PORT_H\r\n#define PORT_H\r\n/**-->\r\n";
+				
+				for(var i:int = 0; i < uiComponent.numChildren;i++)
+				{
+					if(uiComponent.getChildAt(i) is ConnectWire)
+					{
+						theWire = uiComponent.getChildAt(i) as ConnectWire;
+						
+						/*---------------------- 保存用户的工程配置信息到头文件中*/
+						projConfigStr += uiComponent.getChildIndex(theWire.port).toString() + ",";
+						projConfigStr += uiComponent.getChildIndex(theWire.pin).toString() + ";";
+						
+						/*----------------------*/
+
+						//macroStr += "#define " + theWire.port.macroTxt + "\t" + theWire.pin.access + "\r\n";
+						
+						switch(theWire.port.funOption)
+						{
+							case  "f_in":
+								if(theWire.pin.portIn == "err")
+								{
+									Alert.show(theWire.port.macroTxt + "连接的引脚可能有问题，请检查！！","警告");
+								}
+								else
+								{
+									macroStr += "#define " + theWire.port.macroTxt + "\t" + theWire.pin.access + "\r\n";
+									ioConfigStr += "\t" + theWire.pin.portIn + ";\t\t//"+ theWire.port.des_txt.text + "\r\n";
+								}
+								break;
+							case "f_out":
+								if(theWire.pin.portOut == "err")
+								{
+									Alert.show(theWire.port.macroTxt + "连接的引脚可能有问题，请检查！！","警告");
+								}
+								else
+								{
+									macroStr += "#define " + theWire.port.macroTxt + "\t" + theWire.pin.access + "\r\n";
+									ioConfigStr += "\t" + theWire.pin.portOut + ";\t\t//"+ theWire.port.des_txt.text + "\r\n";
+								}
+								break;
+							case "f_tx":
+								if(theWire.pin.tx == "err")
+								{
+									Alert.show(theWire.port.macroTxt + "连接的引脚可能有问题，请检查！！","警告");
+								}
+								else
+								{
+									ioConfigStr += "\t" + theWire.pin.tx + ";\t\t//"+ theWire.port.des_txt.text + "\r\n";
+								}
+								break;
+							case "f_rx":
+								if(theWire.pin.rx == "err")
+								{
+									Alert.show(theWire.port.macroTxt + "连接的引脚可能有问题，请检查！！","警告");
+								}
+								else
+								{
+									ioConfigStr += "\t" + theWire.pin.rx + ";\t\t//"+ theWire.port.des_txt.text + "\r\n";
+								}
+								break;
+							case "f_pwm":
+								if(theWire.pin.pwm == "err")
+								{
+									Alert.show(theWire.port.macroTxt + "连接的引脚可能有问题，请检查！！","警告");
+								}
+								else
+								{
+									ioConfigStr += "\t" + theWire.pin.pwm + ";\t\t//"+ theWire.port.des_txt.text + "\r\n";
+								}
+								break;
+							case "f_int":
+								if(theWire.pin.interrupt == "err")
+								{
+									Alert.show(theWire.port.macroTxt + "连接的引脚可能有问题，请检查！！","警告");
+								}
+								else
+								{
+									ioConfigStr += "\t" + theWire.pin.interrupt + ";\t\t//"+ theWire.port.des_txt.text + "\r\n";
+								}
+								break;
+							case "f_adc":
+								if(theWire.pin.adc == "err")
+								{
+									Alert.show(theWire.port.macroTxt + "连接的引脚可能有问题，请检查！！","警告");
+								}
+								else
+								{
+									ioConfigStr += "\t" + theWire.pin.adc + ";\t\t//"+ theWire.port.des_txt.text + "\r\n";
+								}
+								break;
+						}
+					}
+
+				}
+				
+				var cc:IConfigComponent;
+				for(var j:int = 0; j < configPanel.numElements;j++)
+				{
+					cc = configPanel.getElementAt(j) as IConfigComponent;
+					
+					projConfigStr += j.toString() + ",";
+					projConfigStr += cc.sysParameter.toString() + ";";
+					
+					macroStr += "#define " + cc.macroName + "\t" + cc.sysParameter.toString() + "\r\n";
+				}
+				
+				projConfigStr += "\r\n<--**/\r\n"
+				
+				porth_txt.text = projConfigStr + macroStr + "#endif\r\n";
+				portc_txt.text = ioConfigStr + "}\r\n";
+			}
+			
+			protected function porthLoaded(event:MouseEvent):void
+			{
+				if(!platformIsLoaded)
+				{
+					Alert.show("请先加载平台文件！！","错误");
+					return;
+				}
+				/* 从port.h头文件中读取工程配置信息 */
+				fileRef = new FileReference();
+				/* 加载平台文件 */
+				fileRef.addEventListener(Event.SELECT, onHFileSelected);
+				fileRef.addEventListener(Event.CANCEL, onCancel);
+				fileRef.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
+				fileRef.addEventListener(SecurityErrorEvent.SECURITY_ERROR,
+					onSecurityError);
+				var textTypeFilter:FileFilter = new FileFilter("工程配置头文件 (*.h, *.H)",
+					"*.h;*.H");
+				fileRef.browse([textTypeFilter]);
+			}
+			
+			public function onHFileSelected(evt:Event):void
+			{
+				fileRef.addEventListener(ProgressEvent.PROGRESS, onProgress);
+				fileRef.addEventListener(Event.COMPLETE, onHComplete);
+				fileRef.load();
+			}
+			
+			private var isPara:Boolean;
+			public function onHComplete(evt:Event):void
+			{
+				var str:String;
+				var arr:Array;
+				
+				str = String(fileRef.data);
+
+				var reg:RegExp = /\d+,\d+;/g;
+				arr = str.match(reg);
+				
+				var subReg:RegExp = /\d+/g;
+				var subStr:String;
+				var subArray:Array;
+				
+				var v1:int;
+				var v2:int;
+				
+				var port:DevicePort;
+				var pin:Pin;
+				
+				wires.splice(0,wires.length);
+				for(var p:int = 0; p < uiComponent.numChildren;p++)
+				{
+					if(uiComponent.getChildAt(p) is ConnectWire)
+					{
+						wires.push(uiComponent.getChildAt(p));
+					}
+				}
+				trace(wires.length);
+				for(var q:int = 0; q < wires.length;q++)
+				{
+					uiComponent.removeChild(wires[q]);	
+				}
+				
+
+				isPara = false;
+				for(var i:int = 0; i < arr.length;i++)
+				{
+					subStr = arr[i];
+					subArray = subStr.match(subReg);
+					
+					v1 = parseInt(subArray[0]);
+					v2 = parseInt(subArray[1]);
+					
+					if(!isPara)
+					{
+						if(uiComponent.getChildAt(v1) is DevicePort)
+						{
+							var wire:ConnectWire;
+							
+							wire = new ConnectWire(port);
+							
+							port = uiComponent.getChildAt(v1) as DevicePort;
+							pin = uiComponent.getChildAt(v2) as Pin;
+							
+							wire.port = port;
+							wire.pin = pin;
+							wire.graphics.clear();
+							wire.graphics.lineStyle(4,Math.random()*0x888888);
+							wire.graphics.moveTo(wire.port.x + 180,wire.port.y + 12);
+							wire.graphics.lineTo(wire.pin.x + 9,wire.pin.y + 9);
+							
+							//wires.push(_curWire);
+							uiComponent.addChild(wire);
+						}
+						else
+						{
+							isPara = true;
+						}
+					}
+					
+					var cc:IConfigComponent;
+					if(isPara)
+					{
+						cc = configPanel.getElementAt(v1) as IConfigComponent;
+						cc.sysParameter = v2;
+					}
+				}
+				
+				fileRef.removeEventListener(Event.SELECT, onHFileSelected); 
+				fileRef.removeEventListener(ProgressEvent.PROGRESS, onProgress); 
+				fileRef.removeEventListener(Event.COMPLETE, onHComplete); 
+				fileRef.removeEventListener(Event.CANCEL, onCancel); 
+			}
+			
+			protected function saveHfile(event:MouseEvent):void
+			{
+				fileRef = new FileReference();
+				/* 保存 port.h 文件 */
+				fileRef.addEventListener(Event.SELECT, onSaveFileSelected); 
+				fileRef.save(porth_txt.text,"port.h");
+			}
+			
+			protected function saveCfile(event:MouseEvent):void
+			{
+				fileRef = new FileReference();
+				/* 保存 port.h 文件 */
+				fileRef.addEventListener(Event.SELECT, onSaveFileSelected); 
+				fileRef.save(portc_txt.text,"port.c");
+			}
+			
+			public function onSaveFileSelected(evt:Event):void 
+			{ 
+				fileRef.addEventListener(ProgressEvent.PROGRESS, onSaveProgress); 
+				fileRef.addEventListener(Event.COMPLETE, onSaveComplete); 
+				fileRef.addEventListener(Event.CANCEL, onSaveCancel); 
+			}
+			
+			public function onSaveProgress(evt:ProgressEvent):void
+			{
+				/* 留空，后续扩展 */
+			}
+			
+			public function onSaveComplete(evt:Event):void 
+			{ 
+				Alert.show("数据保存成功","提示");
+				fileRef.removeEventListener(Event.SELECT, onSaveFileSelected); 
+				fileRef.removeEventListener(ProgressEvent.PROGRESS, onSaveProgress); 
+				fileRef.removeEventListener(Event.COMPLETE, onSaveComplete); 
+				fileRef.removeEventListener(Event.CANCEL, onSaveCancel); 
+			} 
+			public function onSaveCancel(evt:Event):void 
+			{ 
+				/* 留空 */
+			}
+
+		]]>
+	</fx:Script>
+	
+	
+	<s:VGroup width="100%" height="100%" paddingLeft="4" paddingRight="4">
+		<s:BorderContainer width="100%" height="60">
+			<s:layout>
+				<s:HorizontalLayout/>
+			</s:layout>
+			<s:Button height="100%" label="加载平台文件" click="loadConfigFile(event)"/>
+			<s:Button height="100%" label="加载工程代码【port.h】" click="porthLoaded(event)"/>
+			<mx:VRule height="100%" width="8"/>
+			<s:Button height="100%" label="生成代码" click="codeGen(event)"/>
+		</s:BorderContainer>
+		<s:HGroup width="100%" height="100%">
+			<s:Panel width="200" height="100%" title="系统配置">
+				<s:Scroller width="100%" height="100%">
+					<s:VGroup width="100%" height="100%" id="configPanel"/>
+				</s:Scroller>
+			</s:Panel>
+				
+			
+			<s:Panel width="600" height="100%" title="设计区">
+				<s:Scroller width="100%" height="100%">
+					<s:Group width="100%" height="100%" id="designPanel" />
+				</s:Scroller>
+			</s:Panel>
+			<s:VGroup width="100%" height="100%">
+				<s:Panel width="100%" height="50%" title="port.h" doubleClickEnabled="true" 
+						 doubleClick="saveHfile(event)">
+					<s:TextArea width="100%" height="100%" editable="false" id="porth_txt">
+						
+					</s:TextArea>
+				</s:Panel>
+				<s:Panel width="100%" height="50%" title="port.c" doubleClickEnabled="true"
+						 doubleClick="saveCfile(event)">
+					<s:TextArea width="100%" height="100%" editable="false" id="portc_txt">
+						
+					</s:TextArea>
+				</s:Panel>
+			</s:VGroup>
+		</s:HGroup>
+	</s:VGroup>
+	
+</s:WindowedApplication>

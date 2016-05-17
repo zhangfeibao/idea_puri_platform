@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:HGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="180" height="20"
+		  implements="com.midea.william.IConfigComponent"
+		  horizontalAlign="left" verticalAlign="middle">
+	<fx:Script>
+		<![CDATA[
+			
+			[Bindable]
+			private var _tooltip:String;
+			private var _macroName:String;
+			
+			public function set sysParameter(para:int):void
+			{
+				if(para != 0)
+				{
+					theValue.selected = true;
+				}
+				else
+				{
+					theValue.selected = false;
+				}
+			}
+			
+			public function get sysParameter():int
+			{
+				return theValue.selected?1:0;
+			}
+			
+			public function get macroName():String
+			{
+				return _macroName;
+			}
+			
+			
+			public function CCBoolInit(info:XML):void
+			{
+				theTitle.text = info.cc_label;
+				_tooltip = info.cc_tooltip;
+				_macroName = info.cc_macro;
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:Label width="100" id="theTitle"/>
+	<s:CheckBox width="100%" id="theValue" toolTip="{_tooltip}"/>
+</s:HGroup>

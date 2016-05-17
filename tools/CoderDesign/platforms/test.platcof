@@ -1,0 +1,222 @@
+<plantform_config>
+	<mcu name = "SH79F1618M">
+		<pin designator = "24">
+			<des>P0.6_INT2</des>
+			<port_in>P0CR &= _BIT6</port_in>
+			<port_out>P0CR |= BIT6</port_out>
+			<access>P0_6</access>
+			<int>TODO</int>
+			<adc>err</adc>
+			<tx>err</tx>
+			<rx>err</rx>
+			<pwm>err</pwm>
+		</pin>
+		
+		<pin designator = "25">
+			<des>P0.7_INT3</des>
+			<port_in>P0CR &= _BIT7</port_in>
+			<port_out>P0CR |= BIT7</port_out>
+			<access>P0_7</access>
+			<int>TODO</int>
+			<adc>err</adc>
+			<tx>err</tx>
+			<rx>err</rx>
+			<pwm>err</pwm>
+		</pin>
+		
+		<pin designator = "26">
+			<des>GND</des>
+			<port_in>err</port_in>
+			<port_out>err</port_out>
+			<access>err</access>
+			<int>err</int>
+			<adc>err</adc>
+			<tx>err</tx>
+			<rx>err</rx>
+			<pwm>err</pwm>
+		</pin>
+		
+		<pin designator = "27">
+			<des>P5.0_XTAL1</des>
+			<port_in>BANK1;P5CR &= _BIT0;BANK0</port_in>
+			<port_out>BANK1;P5CR |= BIT0;BANK0</port_out>
+			<access>P5_0</access>
+			<int>err</int>
+			<adc>err</adc>
+			<tx>err</tx>
+			<rx>err</rx>
+			<pwm>err</pwm>
+		</pin>
+		
+		<pin designator = "28">
+			<des>P5.1_XTAL2</des>
+			<port_in>>BANK1;P5CR &= _BIT0;BANK0</port_in>
+			<port_out>BANK1;P5CR |= BIT0;BANK0</port_out>
+			<access>P5_1</access>
+			<int>err</int>
+			<adc>err</adc>
+			<tx>err</tx>
+			<rx>err</rx>
+			<pwm>err</pwm>
+		</pin>
+	</mcu>
+	
+	<device>
+		<pin>
+			<des>电源LED</des>
+			<macro>LED_POWER</macro>
+			<fun>f_out</fun>
+		</pin>
+		
+		<pin>
+			<des>童锁LED</des>
+			<macro>LED_LOCK</macro>
+			<fun>f_out</fun>
+		</pin>
+		
+		<pin>
+			<des>加热LED</des>
+			<macro>LED_HEAT</macro>
+			<fun>f_out</fun>
+		</pin>
+		
+		<pin>
+			<des>制冷LED</des>
+			<macro>LED_COOL</macro>
+			<fun>f_out</fun>
+		</pin>
+		
+		<pin>
+			<des>高水位LED</des>
+			<macro>LED_WL_HIGH</macro>
+			<fun>f_out</fun>
+		</pin>
+		
+		<pin>
+			<des>中水位LED</des>
+			<macro>LED_WL_MID</macro>
+			<fun>f_out</fun>
+		</pin>
+		
+		<pin>
+			<des>低水位LED</des>
+			<macro>LED_WL_LOW</macro>
+			<fun>f_out</fun>
+		</pin>
+		
+		<pin>
+			<des>电源KEY</des>
+			<macro>KEY_POWER</macro>
+			<fun>f_in</fun>
+		</pin>
+		<pin>
+			<des>童锁KEY</des>
+			<macro>KEY_LOCK</macro>
+			<fun>f_in</fun>
+		</pin>
+		<pin>
+			<des>加热KEY</des>
+			<macro>KEY_HEAT</macro>
+			<fun>f_in</fun>
+		</pin>
+		
+		
+		<pin>
+			<des>加热负载</des>
+			<macro>LOAD_HEAT</macro>
+			<fun>f_out</fun>
+		</pin>
+		<pin>
+			<des>制冷负载</des>
+			<macro>LOAD_COOL</macro>
+			<fun>f_out</fun>
+		</pin>
+		<pin>
+			<des>热水阀负载</des>
+			<macro>LOAD_VALVA</macro>
+			<fun>f_out</fun>
+		</pin>
+		<pin>
+			<des>旁通阀负载</des>
+			<macro>LOAD_PASSWAY_VALVE</macro>
+			<fun>f_out</fun>
+		</pin>
+		<pin>
+			<des>杀毒负载</des>
+			<macro>LOAD_UV</macro>
+			<fun>f_out</fun>
+		</pin>
+	</device>
+	
+	
+	<parameters>
+		<parameter>
+	       <cc_type>num</cc_type>
+	       <cc_label>低水位秒数</cc_label>
+	       <cc_macro>WL_LOW_SEC</cc_macro>
+	       <cc_tooltip>低水位放水时间</cc_tooltip>
+	   </parameter>
+	   <parameter>
+	       <cc_type>num</cc_type>
+	       <cc_label>中水位秒数</cc_label>
+	       <cc_macro>WL_MID_SEC</cc_macro>
+	       <cc_tooltip>中水位放水时间</cc_tooltip>
+	   </parameter>
+	   <parameter>
+	       <cc_type>num</cc_type>
+	       <cc_label>高水位秒数</cc_label>
+	       <cc_macro>WL_HIGH_SEC</cc_macro>
+	       <cc_tooltip>高水位放水时间</cc_tooltip>
+	   </parameter>
+	   <parameter>
+	       <cc_type>bo</cc_type>
+	       <cc_label>制冷使能</cc_label>
+	       <cc_macro>COOL_EN</cc_macro>
+	       <cc_tooltip>该机型是否有制冷功能</cc_tooltip>
+	   </parameter>
+	   <parameter>
+	       <cc_type>bo</cc_type>
+	       <cc_label>浮子水位检测</cc_label>
+	       <cc_macro>FLOATER_CHECK_EN</cc_macro>
+	       <cc_tooltip>该机型是否有F浮子开关检测水位</cc_tooltip>
+	   </parameter>
+	   <parameter>
+	       <cc_type>bo</cc_type>
+	       <cc_label>旁通阀</cc_label>
+	       <cc_macro>LOAD_PASSWAY_VALVE_EN</cc_macro>
+	       <cc_tooltip>是否使用旁通阀负载</cc_tooltip>
+	   </parameter>
+	   <parameter>
+	       <cc_type>bo</cc_type>
+	       <cc_label>杀毒</cc_label>
+	       <cc_macro>LOAD_UV_EN</cc_macro>
+	       <cc_tooltip>是否有UV杀毒功能</cc_tooltip>
+	   </parameter>
+	   <parameter>
+           <cc_type>num</cc_type>
+           <cc_label>热水ADC通道选择</cc_label>
+           <cc_macro>HEAT_ADC_CHANEL</cc_macro>
+           <cc_tooltip>热水传感器所用的ADC通道</cc_tooltip>
+       </parameter>
+	   <parameter>
+           <cc_type>num</cc_type>
+           <cc_label>冷水ADC通道选择</cc_label>
+           <cc_macro>COOL_ADC_CHANEL</cc_macro>
+           <cc_tooltip>冷水传感器所用的ADC通道</cc_tooltip>
+       </parameter>
+	   <parameter>
+           <cc_type>num</cc_type>
+           <cc_label>加热最长时间</cc_label>
+           <cc_macro>HEAT_MAX_SEC</cc_macro>
+           <cc_tooltip>持续加热最长时间限制</cc_tooltip>
+       </parameter>
+	   <parameter>
+           <cc_type>num</cc_type>
+           <cc_label>加热上限温度AD</cc_label>
+           <cc_macro>HEAT_MAX_AD</cc_macro>
+           <cc_tooltip>停止加热的温度【如56°】对应的AD值</cc_tooltip>
+       </parameter>
+
+	</parameters>
+	
+</plantform_config>
