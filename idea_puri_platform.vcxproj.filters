@@ -1,0 +1,1230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="software\app\it.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\app\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\device\st\stm32f0xx\source\templates\system_stm32f0xx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_abs_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_abs_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_abs_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_abs_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_add_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_add_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_add_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_add_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_dot_prod_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_dot_prod_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_dot_prod_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_dot_prod_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_mult_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_mult_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_mult_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_mult_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_negate_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_negate_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_negate_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_negate_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_offset_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_offset_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_offset_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_offset_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_scale_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_scale_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_scale_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_scale_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_shift_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_shift_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_shift_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_sub_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_sub_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_sub_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\basicmathfunctions\arm_sub_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\commontables\arm_common_tables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\commontables\arm_const_structs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_conj_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_conj_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_conj_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_dot_prod_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_dot_prod_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_dot_prod_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mag_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mag_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mag_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mag_squared_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mag_squared_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mag_squared_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mult_cmplx_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mult_cmplx_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mult_cmplx_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mult_real_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mult_real_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\complexmathfunctions\arm_cmplx_mult_real_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\controllerfunctions\arm_pid_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\controllerfunctions\arm_pid_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\controllerfunctions\arm_pid_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\controllerfunctions\arm_pid_reset_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\controllerfunctions\arm_pid_reset_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\controllerfunctions\arm_pid_reset_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\controllerfunctions\arm_sin_cos_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\controllerfunctions\arm_sin_cos_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\fastmathfunctions\arm_cos_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\fastmathfunctions\arm_cos_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\fastmathfunctions\arm_cos_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\fastmathfunctions\arm_sin_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\fastmathfunctions\arm_sin_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\fastmathfunctions\arm_sin_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\fastmathfunctions\arm_sqrt_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\fastmathfunctions\arm_sqrt_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df1_32x64_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df1_32x64_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df1_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df1_fast_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df1_fast_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df1_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df1_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df1_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df1_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df1_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df2T_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df2T_f64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df2T_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_df2T_init_f64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_stereo_df2T_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_biquad_cascade_stereo_df2T_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_fast_opt_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_fast_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_fast_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_opt_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_opt_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_partial_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_partial_fast_opt_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_partial_fast_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_partial_fast_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_partial_opt_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_partial_opt_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_partial_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_partial_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_partial_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_conv_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_correlate_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_correlate_fast_opt_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_correlate_fast_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_correlate_fast_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_correlate_opt_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_correlate_opt_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_correlate_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_correlate_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_correlate_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_decimate_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_decimate_fast_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_decimate_fast_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_decimate_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_decimate_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_decimate_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_decimate_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_decimate_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_fast_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_fast_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_init_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_interpolate_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_interpolate_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_interpolate_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_interpolate_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_interpolate_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_interpolate_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_lattice_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_lattice_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_lattice_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_lattice_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_lattice_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_lattice_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_sparse_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_sparse_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_sparse_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_sparse_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_sparse_init_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_sparse_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_sparse_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_fir_sparse_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_iir_lattice_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_iir_lattice_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_iir_lattice_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_iir_lattice_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_iir_lattice_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_iir_lattice_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_norm_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_norm_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_norm_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_norm_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_norm_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_norm_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\filteringfunctions\arm_lms_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_add_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_add_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_add_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_cmplx_mult_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_cmplx_mult_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_cmplx_mult_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_inverse_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_inverse_f64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_mult_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_mult_fast_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_mult_fast_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_mult_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_mult_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_scale_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_scale_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_scale_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_sub_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_sub_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_sub_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_trans_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_trans_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\matrixfunctions\arm_mat_trans_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_max_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_max_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_max_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_max_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_mean_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_mean_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_mean_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_mean_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_min_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_min_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_min_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_min_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_power_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_power_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_power_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_power_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_rms_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_rms_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_rms_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_std_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_std_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_std_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_var_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_var_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\statisticsfunctions\arm_var_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_copy_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_copy_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_copy_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_copy_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_fill_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_fill_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_fill_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_fill_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_float_to_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_float_to_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_float_to_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_q15_to_float.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_q15_to_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_q15_to_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_q31_to_float.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_q31_to_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_q31_to_q7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_q7_to_float.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_q7_to_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\supportfunctions\arm_q7_to_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_bitreversal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix2_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix2_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix2_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix2_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix2_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix2_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix4_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix4_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix4_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix4_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix4_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix4_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_cfft_radix8_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_dct4_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_dct4_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_dct4_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_dct4_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_dct4_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_dct4_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_rfft_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_rfft_fast_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_rfft_fast_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_rfft_init_f32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_rfft_init_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_rfft_init_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_rfft_q15.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\cmsis\dsp_lib\source\transformfunctions\arm_rfft_q31.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_adc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_adc_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_can.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_cec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_comp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_cortex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_crc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_crc_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_dac.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_dac_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_dma.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_flash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_flash_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_gpio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_i2c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_i2c_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_i2s.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_irda.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_iwdg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_msp_template.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_pcd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_pcd_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_pwr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_pwr_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_rcc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_rcc_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_rtc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_rtc_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_smartcard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_smartcard_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_smbus.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_spi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_spi_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_tim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_tim_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_tsc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_uart.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_uart_ex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_usart.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\libs\stm32f0xx_hal_driver\src\stm32f0xx_hal_wwdg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\portable\portable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\drivers\IC_1668.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f030x6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f030x8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f030xc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f031x6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f038xx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f042x6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f048xx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f051x8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f058xx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f070x6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f070xb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f071xb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f072xb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f078xx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f091xc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f098xx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\stm32f0xx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\device\st\stm32f0xx\include\system_stm32f0xx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\arm_common_tables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\arm_const_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\arm_math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\cmsis_armcc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\cmsis_armcc_V6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\cmsis_gcc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\core_cm0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\core_cm0plus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\core_cm3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\core_cm4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\core_cm7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\core_cmFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\core_cmInstr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\core_cmSimd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\core_sc000.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\include\core_sc300.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\cmsis\rtos\template\cmsis_os.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_adc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_adc_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_can.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_cec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_comp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_conf_template.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_cortex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_crc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_crc_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_dac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_dac_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_def.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_dma.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_dma_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_flash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_flash_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_gpio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_gpio_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_i2c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_i2c_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_i2s.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_irda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_irda_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_iwdg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_pcd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_pcd_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_pwr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_pwr_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_rcc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_rcc_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_rtc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_rtc_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_smartcard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_smartcard_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_smbus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_spi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_spi_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_tim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_tim_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_tsc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_uart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_uart_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_usart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_usart_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\stm32f0xx_hal_wwdg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\libs\stm32f0xx_hal_driver\inc\legacy\stm32_hal_legacy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\portable\portable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\drivers\IC_1668.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\app\macrodef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="software\build\idea_puri_platform.eww" />
+  </ItemGroup>
+</Project>
