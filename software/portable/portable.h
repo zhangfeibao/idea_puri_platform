@@ -6,7 +6,37 @@
 #include "stm32f0xx.h"
 #include "macrodef.h"
 
+
+typedef unsigned char idea_uint8_t;
+typedef signed char idea_int8_t;
+typedef unsigned short idea_uint16_t;
+typedef signed short idea_int16_t;
+typedef unsigned int idea_uint32_t;
+typedef signed int idea_int32_t;
+typedef unsigned long long idea_uint64_t;
+typedef signed long long idea_int64_t;
+typedef float idea_float32_t;
+typedef double idea_float64_t;
+
+typedef unsigned int idea_fast_int_t;
+typedef unsigned int idea_fast_bool_t;
+
+typedef enum
+{
+    IDEA_FALSE,
+    IDEA_TRUE = !IDEA_FALSE
+}idea_bool_t;
+
+typedef void(*task_t)(void);
+
+
+
 #include "IC_1668.h"
+
+
+
+#define UART_IOT_EN     1
+
 
 #define ISR_NMI_HANDLER         void NMI_Handler(void)
 #define ISR_HARD_FAULT_HANDLER  void HardFault_Handler(void)
@@ -42,6 +72,9 @@
 
 void SysClock_Config(void);
 void GPIO_Config(void);
+
+extern UART_HandleTypeDef uart_iot;
+void UartIot_Init(void);
 
 
 #endif 

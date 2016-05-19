@@ -67,7 +67,7 @@ void delayus(void)
 
 static void sendByteToCt1668(unsigned char datas)
 {
-    unsigned char i;
+    idea_uint8_t i;
 
     IC1668_CLK_RESET;
     IC1668_DIO_RESET;
@@ -91,10 +91,10 @@ static void sendByteToCt1668(unsigned char datas)
     }
 }
 
-void CT1668_WriteDisplayData(unsigned char datas[], unsigned char dataLen,
+void CT1668_WriteDisplayData(idea_uint8_t datas[], idea_uint8_t dataLen,
     BrightnessLevel_t dispCtrl)
 {
-    unsigned char i;
+    idea_uint8_t i;
 
     IC1668_STB_SET;
     IC1668_DIO_SET;

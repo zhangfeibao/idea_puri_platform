@@ -17,6 +17,6 @@ typedef enum
 
 extern BrightnessLevel_t Display_BrightnessLevel;
 
-void CT1668_WriteDisplayData(unsigned char datas[], unsigned char dataLen, BrightnessLevel_t dispCtrl);
+void CT1668_WriteDisplayData(idea_uint8_t datas[], idea_uint8_t dataLen, BrightnessLevel_t dispCtrl);
 
 #endif
